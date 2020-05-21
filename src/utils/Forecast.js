@@ -10,7 +10,14 @@ const getForecast = (latitude,longitude,callback) =>{
             callback('please provide a valid location!',undefined)
         }
         else{
-            const data = `The current temperature is ${result.body.current.temperature} degree celsius and it feels like ${result.body.current.feelslike} degree celsius`
+            const data = `Current weather is ${result.body.current.weather_descriptions[0]}
+
+            Current temperature is ${result.body.current.temperature} degree celsius and it feels like ${result.body.current.feelslike} degree celsius
+            
+            Humidity is ${result.body.current.humidity}% 
+            
+            wind speed is ${result.body.current.wind_speed}km/hr`
+
             callback(undefined,data)
         }
     })
