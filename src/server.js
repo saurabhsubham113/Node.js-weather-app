@@ -25,29 +25,13 @@ hbs.registerPartials(partialPath)   //registering partials
 //serving static file 
 app.use(express.static(publicDirectory))
 
-//http route
+// http route
 app.get('', (req,res) =>{
     res.render('index',{
         title:'Weather app',
         name:'subham saurabh'
     })
 })
-
-app.get('/about', (req,res) =>{
-    res.render('about',{
-        title:'About section',
-        name:'subham saurabh'
-    })
-})
-
-app.get('/help', (req,res) =>{
-    res.render('help',{
-        title:'help section',
-        name:'subham saurabh'
-    })
-})
-
-
 
 app.get('/weather' , (req, res) => {
     const address = req.query.address

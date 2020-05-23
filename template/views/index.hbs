@@ -1,25 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/img/weather.png" type="image/x-icon">
+    <link rel="icon" href="/img/weather.png" type="image/x-icon">
     <link rel="stylesheet" href="/css/style.css">
+    <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js"></script>
     <title>weather</title>
 </head>
-<body>
-    <div class="main-content">
-        {{>header}}
-        <p>Use this site to get your weather!</p>
-        <form >
-            <input type="text" placeholder="Location">
-            <button type="submit">search</button>
-        </form>
-        <p id="message-1"></p>
-        <p id="message-2"></p>
-    </div>
-    {{>footer}}
 
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="icon-container">
+                <canvas id="icon" width="100" height="100"></canvas>
+            </div>
+        </div>
+        <div class="content">
+            <div class="general-information">
+                <div class="status" data-status>Enter a location</div>
+                <div class="location" data-location>To find a weather</div>
+            </div>
+            <div class="detail-section">
+                <div class="detail">
+                    <div class="title">Wind</div>
+                    <div class="value" data-wind>TBD</div>
+                </div>
+                 <div class="detail bordered">
+                    <div class="title">Temp.</div>
+                    <div class="value" data-temp>TBD</div>
+                </div>
+                 <div class="detail">
+                    <div class="title">Humidity</div>
+                    <div class="value" data-humidity>TBD</div>
+                </div>
+            </div>
+            <div class="city-search-container">
+                <form class="city-serach">
+                    <input type="text"  placeholder="Enter Location">
+                    <button type="submit">search</button>
+                </form> 
+            </div>
+        </div>
+    </div>
     <script src="/js/script.js"></script>
 </body>
+
 </html>
