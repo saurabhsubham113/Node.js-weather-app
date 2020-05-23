@@ -83,6 +83,8 @@ function check(weatherStatus){
         return 'partly-cloudy-day'
     else if(clear)
         return 'clear-day'
+    else
+        return 'clear-day'
 
 
     
