@@ -15,9 +15,9 @@ body{
 }
 
 .container{
-    max-width: 90%;
+    max-width: 80%;
     width: 1000px;
-    margin-top: 80px;
+    margin: 2.6em 0;
     background-color: white;
     box-shadow: 0 5px 10px black;
     border-radius: 5px;

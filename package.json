@@ -1,11 +1,11 @@
 {
-  "name": "web-Server",
+  "name": "web-server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node src/server.js",
-    "devStart" : "nodemon src/server.js -e hbs,js"
+    "devStart": "nodemon src/server.js -e hbs,js"
   },
   "keywords": [],
   "author": "",
